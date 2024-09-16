@@ -3,7 +3,7 @@ import app from './app';
 import dotenv from 'dotenv';
 dotenv.config();
 
-const DB = <string>process.env.DATABASE || 'mongodb://localhost:27017/natours';
+const DB = <string>process.env.DATABASE;
 
 mongoose.connect(DB).then(() => {
   console.log(`DB is connected successfully`);
