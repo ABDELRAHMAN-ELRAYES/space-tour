@@ -26,25 +26,25 @@ const reviewSchema = new Schema({
   },
 });
 
-reviewSchema.statics.calculateRatings = async function (tourId: string) {
+reviewSchema.statics.calculateRatings = async function (drawId: string) {
   const reviews = await this.aggregate([
-    { $match: { tour: tourId } },
+    { $match: { tour: drawId } },
     {
       $group: {
         _id: '$tour',
         ratingsQuantity: { $sum: 1 },
-        ratingsAverage: { $avg: 'rating' },
+        ratingsAverage: { $avg: '$rating' },
       },
     },
   ]);
 
   if (reviews.length > 0) {
-    await Draw.findByIdAndUpdate(tourId, {
+    await Draw.findByIdAndUpdate(drawId, {
       ratingsAverage: reviews[0].ratingsAverage,
       ratingsQuantity: reviews[0].ratingsQuantity,
     });
   } else {
-    await Draw.findByIdAndUpdate(tourId, {
+    await Draw.findByIdAndUpdate(drawId, {
       ratingsAverage: 4.5,
       ratingsQuantity: 0,
     });

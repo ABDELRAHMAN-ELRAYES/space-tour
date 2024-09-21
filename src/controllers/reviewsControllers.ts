@@ -2,13 +2,13 @@ import { Request, Response, NextFunction } from 'express';
 import { catchAsync } from '../utils/catchAsync';
 import Review from './../models/reviewModel';
 
-export const setTourUserRequestId = (
+export const setDrawUserRequestId = (
   req: Request,
   res: Response,
   next: NextFunction
 ) => {
   if (!req.body.user) req.body.user = req.user._id;
-  if (!req.body.tour) req.body.tour = req.params.tourId;
+  if (!req.body.draw) req.body.draw = req.params.drawId;
   next();
 };
 export const getReview = catchAsync(

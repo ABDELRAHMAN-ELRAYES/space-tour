@@ -9,6 +9,7 @@ import starRouter from './routes/star';
 import exoplanetRouter from './routes/exoplanet';
 import path from 'path';
 import userRouter from './routes/userRotues';
+import reviewRouter from './routes/reviews';
 
 const app = express();
 
@@ -23,6 +24,8 @@ app.use(cookieParserMiddleware);
 app.use('/exoplanet', exoplanetRouter);
 app.use('/star', starRouter);
 app.use('/users', userRouter);
+app.use('/reviewers', reviewRouter);
+
 
 // default route to response if the user input a wrong route
 app.use('*', (req: Request, res: Response, next: NextFunction) => {

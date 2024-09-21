@@ -5,7 +5,7 @@ import {
   createNewReview,
   updateReview,
   deleteReview,
-  setTourUserRequestId,
+  setDrawUserRequestId,
 } from '../controllers/reviewsControllers';
 import { protect } from '../controllers/authControllers';
 const reviewRouter = Router({ mergeParams: true });
@@ -14,8 +14,8 @@ reviewRouter.use(protect);
 
 reviewRouter
   .route('/')
-  .get(setTourUserRequestId, getAllReviews)
-  .post(setTourUserRequestId, createNewReview);
+  .get(setDrawUserRequestId, getAllReviews)
+  .post(setDrawUserRequestId, createNewReview);
 
 reviewRouter
   .route('/:id')
