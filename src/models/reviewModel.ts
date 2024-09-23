@@ -12,7 +12,7 @@ const reviewSchema = new Schema({
     min: 1,
     max: 5,
   },
-  tour: {
+  draw: {
     ref: 'Draw',
     type: Schema.ObjectId,
   },
@@ -50,8 +50,8 @@ reviewSchema.statics.calculateRatings = async function (drawId: string) {
     });
   }
 };
-reviewSchema.post<iReview>('save', function () {
-  (this.constructor as any).calculateRatings(this.tour);
+reviewSchema.post<iReview>('save', function (this: any) {
+  this.constructor.calculateRatings(this.tour);
 });
 const Review = model('Review', reviewSchema);
 
