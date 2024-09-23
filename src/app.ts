@@ -13,6 +13,11 @@ import reviewRouter from './routes/reviews';
 
 const app = express();
 
+// setup the view engine
+app.set('view engine', 'pug');
+app.set('views', path.join(__dirname, 'views'));
+
+// setup static files
 app.use(express.static(path.join(__dirname, 'public')));
 
 // using middlewares
@@ -25,7 +30,6 @@ app.use('/exoplanet', exoplanetRouter);
 app.use('/star', starRouter);
 app.use('/users', userRouter);
 app.use('/reviewers', reviewRouter);
-
 
 // default route to response if the user input a wrong route
 app.use('*', (req: Request, res: Response, next: NextFunction) => {
