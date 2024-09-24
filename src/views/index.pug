@@ -1,0 +1,77 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    link(href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet')
+    link(rel="stylesheet" href="../public/css/style.css")
+    title Login & Registration
+  body
+    .wrapper
+      nav.nav
+        .nav-logo
+          p LOGO .
+        .nav-menu#navMenu
+          ul
+            li
+              a.link.active(href="#") Home
+            li
+              a.link(href="#") Blog
+            li
+              a.link(href="#") Services
+            li
+              a.link(href="#") About
+        .nav-button
+          button.btn.white-btn#loginBtn(onclick="login()") Sign In
+          button.btn#registerBtn(onclick="register()") Sign Up
+        .nav-menu-btn
+          i.bx.bx-menu(onclick="myMenuFunction()")
+      
+      //- Form box
+      .form-box
+        //- login form
+        .login-container#login
+          .input-box
+            input.input-field(type="text" placeholder="Username or Email")
+            i.bx.bx-user
+          .input-box
+            input.input-field(type="password" placeholder="Password")
+            i.bx.bx-lock-alt
+          .input-box
+            input.submit(type="submit" value="Sign In")
+          .two-col
+            .one
+              input#login-check(type="checkbox")
+              label(for="login-check") Remember Me
+            .two
+              label
+                a(href="#") Forgot password?
+          .top
+            span Don't have an account? 
+            a(href="#" onclick="register()") Sign Up
+        
+        //- registration form
+        .register-container#register
+          .two-forms
+            .header-img
+              img#clickableImage(src="../public/images/icon_user.png" alt="user_icon" width="100px")
+            input#fileInput(type="file" style="display: none;" accept="image/*")
+            .input-box
+              input.input-field(type="text" placeholder="Firstname")
+              i.bx.bx-user
+            .input-box
+              input.input-field(type="text" placeholder="Lastname")
+              i.bx.bx-user
+          .input-box
+            input.input-field(type="text" placeholder="Email")
+            i.bx.bx-envelope
+          .input-box
+            input.input-field(type="password" placeholder="Password")
+            i.bx.bx-lock-alt
+          .input-box
+            input.submit(type="submit" value="Register")
+          .top
+            span Have an account? 
+            a(href="#" onclick="login()") Login
+  script(src="../public/js/script.js")
