@@ -1,0 +1,22 @@
+extends index
+block main
+    form.register-container#register(action="/users/signup" method="POST" enctype="multipart/form-data")
+      img(src="/img/icon_user.png" style="width:10rem" alt="")
+      input(type="file" name="photo")
+      .input-box
+          input.input-field(type="text" name="name" placeholder="Full Name")
+          i.bx.bx-user
+      .input-box
+        input.input-field(type="text" name="email" placeholder="Email")
+        i.bx.bx-envelope
+      .input-box
+        input.input-field(type="password"  name="password" placeholder="Password")
+        i.bx.bx-lock-alt
+      .input-box
+        input.input-field(type="password"  name="passwordConfirm"  placeholder="Confirm Password")
+        i.bx.bx-lock-alt
+      .input-box
+        input.submit(type="submit" value="Register")
+      .top
+        span Have an account? 
+        a(href="/login" ) Login

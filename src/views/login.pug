@@ -1,0 +1,14 @@
+extends index
+block main
+    form.register-container#register(action="/users/login" method="POST")
+        .input-box
+          input.input-field(type="text" name="email" placeholder="Email")
+          i.bx.bx-envelope
+        .input-box
+          input.input-field(type="password"  name="password" placeholder="Password")
+          i.bx.bx-lock-alt
+        .input-box
+          input.submit(type="submit" value="Login")
+        .top
+          span Don't have an account? 
+          a(href="/signup") Sign Up
