@@ -1,0 +1,26 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Share Your Planet
+    link(rel="stylesheet", href="../public/css/share.css")
+  body
+    .container
+      .content
+        // the place where you post the image
+        .postSection
+          h2 Share Your Planet
+          form#planetForm(method="post", enctype="multipart/form-data")
+            label(for="planetName") Planet Name
+            input(type="text", name="planetName", id="planetName", class="inputName", placeholder="Enter your planet's name", required)
+
+            label(for="file-upload") Upload Planet Image
+            input(type="file", id="file-upload", name="image", class="file-upload", accept="image/*", required)
+
+            button(type="submit", class="upload-btn") Post
+        // / the place where you post the image /
+        // the posts list
+        .postsList
+        // / the posts list /
+    script(src="../public/js/share.js")

@@ -1,0 +1,66 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Planet Builder
+    script(type="importmap").
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.161/build/three.module.js",
+          "jsm/": "https://cdn.jsdelivr.net/npm/three@0.161/examples/jsm/"
+        }
+      }
+    link(rel="stylesheet", href="../public/css/build.css")
+  body
+    #controls
+      h2 Planet Builder Controls
+
+      // Cloud Texture Selection
+      .section
+        label(for="cloudTextureSelect", class="label-text") Cloud Texture:
+        select#cloudTextureSelect
+          option(value="04_earthcloudmap.jpg") Cloud 1
+          option(value="Clouds1.png") Cloud 2
+          option(value="Clouds2.png") Cloud 3
+          option(value="Clouds3.png") Cloud 4
+          option(value="Clouds4.png") Cloud 5
+
+      // Cloud Speed Control
+      .section
+        label(for="cloudSpeed", class="label-text") Cloud Speed:
+        input(type="range", id="cloudSpeed", min="0", max="0.01", step="0.0001", value="0.0023")
+        span#cloudSpeedValue 0.0023
+
+      // Glow Toggle and Color Picker
+      .section
+        label.switch
+          input(type="checkbox", id="glowToggle")
+          span.slider
+        span.label-text Show Glow
+        input(type="color", id="glowColorPicker", style="display: none")
+
+    #textureSelector.texture-selector
+      h3 Select Planet Texture:
+      .texture-list
+        img(src="../public/textures/Alpine.png", alt="Alpine", class="texture-option", data-texture="Alpine.png")
+        img(src="../public/textures/Gaseous1.png", alt="Gaseous 1", class="texture-option", data-texture="Gaseous1.png")
+        img(src="../public/textures/Gaseous2.png", alt="Gaseous 2", class="texture-option", data-texture="Gaseous2.png")
+        img(src="../public/textures/Gaseous3.png", alt="Gaseous 3", class="texture-option", data-texture="Gaseous3.png")
+        img(src="../public/textures/Gaseous4.png", alt="Gaseous 4", class="texture-option", data-texture="Gaseous4.png")
+        img(src="../public/textures/Icy.png", alt="Icy", class="texture-option", data-texture="Icy.png")
+        img(src="../public/textures/Martian.png", alt="Martian", class="texture-option", data-texture="Martian.png")
+        img(src="../public/textures/Savannah.png", alt="Savannah", class="texture-option", data-texture="Savannah.png")
+        img(src="../public/textures/Swamp.png", alt="Swamp", class="texture-option", data-texture="Swamp.png")
+        img(src="../public/textures/Terrestrial1.png", alt="Terrestrial 1", class="texture-option", data-texture="Terrestrial1.png")
+        img(src="../public/textures/Terrestrial2.png", alt="Terrestrial 2", class="texture-option", data-texture="Terrestrial2.png")
+        img(src="../public/textures/Terrestrial3.png", alt="Terrestrial 3", class="texture-option", data-texture="Terrestrial3.png")
+        img(src="../public/textures/Terrestrial4.png", alt="Terrestrial 4", class="texture-option", data-texture="Terrestrial4.png")
+        img(src="../public/textures/Tropical.png", alt="Tropical", class="texture-option", data-texture="Tropical.png")
+        img(src="../public/textures/Venusian.png", alt="Venusian", class="texture-option", data-texture="Venusian.png")
+        img(src="../public/textures/Volcanic.png", alt="Volcanic", class="texture-option", data-texture="Volcanic.png")
+
+      .section
+        button#downloadImage.downloadImage Download Image
+
+    script(type="module", src="../public/js/build.js")

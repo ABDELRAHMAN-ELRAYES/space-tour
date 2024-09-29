@@ -1,0 +1,162 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #1a1a1a;
+    color: #ffffff;
+  }
+
+  #controls {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 10;
+    background: rgba(30, 30, 30, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+    width: 300px;
+    color: #f0f0f0;
+  }
+
+  #controls h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #66bb6a;
+    border-bottom: 1px solid #444;
+    padding-bottom: 5px;
+  }
+
+  #controls .section {
+    margin-bottom: 20px;
+  }
+
+  #controls label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  #controls .label-text {
+    font-size: 16px;
+    color: #f0f0f0;
+  }
+
+  #controls select,
+  #controls input[type='range'],
+  #controls input[type='color'] {
+    flex-grow: 1;
+    background-color: #333;
+    border: none;
+    border-radius: 5px;
+    color: #f0f0f0;
+    padding: 5px 10px;
+    outline: none;
+  }
+
+  #controls input[type='range'] {
+    width: 90%;
+  }
+
+  #controls input[type='range']::-webkit-slider-thumb {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #66bb6a;
+    cursor: pointer;
+  }
+
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    margin-bottom: 10px;
+  }
+
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+  }
+
+  .slider:before {
+    position: absolute;
+    content: '';
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+  }
+
+  input:checked + .slider {
+    background-color: #66bb6a;
+  }
+
+  input:checked + .slider:before {
+    transform: translateX(26px);
+  }
+
+  #textureSelector {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    z-index: 10;
+    background: rgba(30, 30, 30, 0.9);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+    max-width: 90%;
+    color: #f0f0f0;
+  }
+
+  .texture-list {
+    display: flex;
+    overflow-x: auto;
+  }
+
+  .texture-option {
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    transition: border-color 0.3s;
+    object-fit: cover;
+  }
+
+  .texture-option:hover {
+    border-color: #66bb6a;
+  }
+  .downloadImage {
+    background-color: #66bb6a;
+    border: none;
+    padding: 10px 20px;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+  }
+
+  .downloadImage:hover {
+    background-color: #57a157;
+  }
