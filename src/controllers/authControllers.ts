@@ -16,8 +16,9 @@ const createToken = async (res: Response, id: string) => {
 // controller of signup
 export const signup = catchAsync(
   async (req: Request, res: Response, next: NextFunction) => {
+    console.log(req.body);
     // 1) check if there is entered data or not
-    const { email, password } = req.body;
+     const { email, password } = req.body;
     if (!email || !password) {
       return next(
         new ErrorHandler(
@@ -32,6 +33,8 @@ export const signup = catchAsync(
     if (user.length) {
       return next(new ErrorHandler('This email is already registered', 401));
     }
+    req.body.photo = req.file?.filename;
+
     const newUser = await User.create(req.body);
 
     // 4) create a session for this user (create a token)
@@ -42,12 +45,13 @@ export const signup = catchAsync(
       status: 'success',
       message: 'You are signed up successfully',
       token,
-    });
+    }); 
   }
 );
 export const login = catchAsync(
   async (req: Request, res: Response, next: NextFunction) => {
-    // 1) check all required data is entered
+
+     // 1) check all required data is entered
     const { email, password } = req.body;
     console.log(req.body);
     if (!email || !password) {
