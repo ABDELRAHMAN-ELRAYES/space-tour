@@ -1,0 +1,219 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-image: url(../images/pexels-philippedonn-1169754.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.content {
+  background-color: black;
+  height: 100vh;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+ .postSection {
+  background-color: #1f1f1f;
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.postSection h2 {
+  color: #fff;
+  font-size: 22px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.postSection label {
+  color: #ccc;
+  font-size: 16px;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.inputName, 
+.file-upload {
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #555;
+  background-color: #333;
+  color: #fff;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.inputName:focus, 
+.file-upload:focus {
+  border-color: #66bb6a;
+}
+
+.postSection button {
+  padding: 12px 30px;
+  background-color: #66bb6a;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.postSection button:hover {
+  background-color: #57a157;
+}
+
+.postSection .upload-btn {
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .inputName, 
+  .file-upload {
+    width: 100%;
+  }
+}
+
+/* Custom scrollbar for Webkit-based browsers (Chrome, Safari, Edge) */
+.postsList {
+  background-color: black;
+  height: 70%;
+  overflow-y: auto;
+}
+
+/* Style the scrollbar */
+.postsList::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+}
+
+/* Style the scrollbar track */
+.postsList::-webkit-scrollbar-track {
+  background-color: #1f1f1f; /* Dark background for the track */
+  border-radius: 10px;
+}
+
+/* Style the scrollbar thumb (the draggable part) */
+.postsList::-webkit-scrollbar-thumb {
+  background-color: #66bb6a; /* Color for the scrollbar */
+  border-radius: 10px;
+  border: 2px solid #1f1f1f; /* Creates a little padding around the thumb */
+}
+
+/* Hover effect for the scrollbar thumb */
+.postsList::-webkit-scrollbar-thumb:hover {
+  background-color: #57a157; /* Darken the color when hovered */
+}
+
+/* Scrollbar for Firefox */
+.postsList {
+  scrollbar-width: thin; /* Makes the scrollbar thinner */
+  scrollbar-color: #66bb6a #1f1f1f; /* Sets the thumb and track colors */
+}
+
+
+.card {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+  background-color: #2d2f31;
+  border-radius: 15px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.profile-pic-container {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid white;
+ 
+}
+
+.profile-pic {
+  
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.user-name {
+  color: white;
+  font-size: 18px;
+  margin-left: 10px;
+}
+
+.planetPic {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.heart-link {
+  color: #ff6b6b;
+  font-size: 24px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.heart-link:hover {
+  color: #ff4b4b;
+}
+
+.commentLabel{
+  color: #fff;
+}
+#comment {
+  width: 90%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #66bb6a;
+  margin-top: 10px;
+  color: #fff;
+  background-color: #2d2f31;
+}
+.planet-name {
+  font-size: 1.5rem; 
+  color: #4CAF50; 
+  font-weight: bold; 
+  margin-top: 10px; 
+  margin-bottom: 15px; 
+  text-align: center; 
+  text-transform: capitalize; 
+  letter-spacing: 1px; 
+  border-bottom: 2px solid #e0e0e0; 
+  padding-bottom: 5px; 
+}
