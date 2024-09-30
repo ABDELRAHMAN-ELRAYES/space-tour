@@ -2,8 +2,8 @@ doctype html
 html(lang="en")
   head
     meta(charset="UTF-8")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    title Planet Builder
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Space Tour | #{title}
     script(type="importmap").
       {
         "imports": {
@@ -11,7 +11,8 @@ html(lang="en")
           "jsm/": "https://cdn.jsdelivr.net/npm/three@0.161/examples/jsm/"
         }
       }
-    link(rel="stylesheet", href="../public/css/build.css")
+    link(rel="stylesheet" href="/css/build.css")
+    link(rel="icon", href="/img/icons/logo.png")
   body
     #controls
       h2 Planet Builder Controls
@@ -43,24 +44,24 @@ html(lang="en")
     #textureSelector.texture-selector
       h3 Select Planet Texture:
       .texture-list
-        img(src="../public/textures/Alpine.png", alt="Alpine", class="texture-option", data-texture="Alpine.png")
-        img(src="../public/textures/Gaseous1.png", alt="Gaseous 1", class="texture-option", data-texture="Gaseous1.png")
-        img(src="../public/textures/Gaseous2.png", alt="Gaseous 2", class="texture-option", data-texture="Gaseous2.png")
-        img(src="../public/textures/Gaseous3.png", alt="Gaseous 3", class="texture-option", data-texture="Gaseous3.png")
-        img(src="../public/textures/Gaseous4.png", alt="Gaseous 4", class="texture-option", data-texture="Gaseous4.png")
-        img(src="../public/textures/Icy.png", alt="Icy", class="texture-option", data-texture="Icy.png")
-        img(src="../public/textures/Martian.png", alt="Martian", class="texture-option", data-texture="Martian.png")
-        img(src="../public/textures/Savannah.png", alt="Savannah", class="texture-option", data-texture="Savannah.png")
-        img(src="../public/textures/Swamp.png", alt="Swamp", class="texture-option", data-texture="Swamp.png")
-        img(src="../public/textures/Terrestrial1.png", alt="Terrestrial 1", class="texture-option", data-texture="Terrestrial1.png")
-        img(src="../public/textures/Terrestrial2.png", alt="Terrestrial 2", class="texture-option", data-texture="Terrestrial2.png")
-        img(src="../public/textures/Terrestrial3.png", alt="Terrestrial 3", class="texture-option", data-texture="Terrestrial3.png")
-        img(src="../public/textures/Terrestrial4.png", alt="Terrestrial 4", class="texture-option", data-texture="Terrestrial4.png")
-        img(src="../public/textures/Tropical.png", alt="Tropical", class="texture-option", data-texture="Tropical.png")
-        img(src="../public/textures/Venusian.png", alt="Venusian", class="texture-option", data-texture="Venusian.png")
-        img(src="../public/textures/Volcanic.png", alt="Volcanic", class="texture-option", data-texture="Volcanic.png")
+        img(src="/textures/Alpine.png", alt="Alpine", class="texture-option", data-texture="Alpine.png")
+        img(src="/textures/Gaseous1.png", alt="Gaseous 1", class="texture-option", data-texture="Gaseous1.png")
+        img(src="/textures/Gaseous2.png", alt="Gaseous 2", class="texture-option", data-texture="Gaseous2.png")
+        img(src="/textures/Gaseous3.png", alt="Gaseous 3", class="texture-option", data-texture="Gaseous3.png")
+        img(src="/textures/Gaseous4.png", alt="Gaseous 4", class="texture-option", data-texture="Gaseous4.png")
+        img(src="/textures/Icy.png", alt="Icy", class="texture-option", data-texture="Icy.png")
+        img(src="/textures/Martian.png", alt="Martian", class="texture-option", data-texture="Martian.png")
+        img(src="/textures/Savannah.png", alt="Savannah", class="texture-option", data-texture="Savannah.png")
+        img(src="/textures/Swamp.png", alt="Swamp", class="texture-option", data-texture="Swamp.png")
+        img(src="/textures/Terrestrial1.png", alt="Terrestrial 1", class="texture-option", data-texture="Terrestrial1.png")
+        img(src="/textures/Terrestrial2.png", alt="Terrestrial 2", class="texture-option", data-texture="Terrestrial2.png")
+        img(src="/textures/Terrestrial3.png", alt="Terrestrial 3", class="texture-option", data-texture="Terrestrial3.png")
+        img(src="/textures/Terrestrial4.png", alt="Terrestrial 4", class="texture-option", data-texture="Terrestrial4.png")
+        img(src="/textures/Tropical.png", alt="Tropical", class="texture-option", data-texture="Tropical.png")
+        img(src="/textures/Venusian.png", alt="Venusian", class="texture-option", data-texture="Venusian.png")
+        img(src="/textures/Volcanic.png", alt="Volcanic", class="texture-option", data-texture="Volcanic.png")
 
       .section
         button#downloadImage.downloadImage Download Image
 
-    script(type="module", src="../public/js/build.js")
+    script(type="module", src="/js/build.js")

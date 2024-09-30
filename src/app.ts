@@ -5,12 +5,12 @@ import {
   globalErrorHandlerMiddleware,
   cookieParserMiddleware,
 } from './middlewares/middlewares';
-import starRouter from './routes/star';
-import exoplanetRouter from './routes/exoplanet';
 import path from 'path';
 import userRouter from './routes/userRotues';
-import reviewRouter from './routes/reviews';
+import reviewRouter from './routes/commentsRoutes';
 import viewRouter from './routes/viewRoutes';
+import postRouter from './routes/postRoutes';
+import CommentRouter from './routes/commentsRoutes';
 
 const app = express();
 
@@ -31,10 +31,10 @@ app.use(cookieParserMiddleware);
 
 // using routers in app
 app.use('/', viewRouter);
-app.use('/exoplanet', exoplanetRouter);
-app.use('/star', starRouter);
 app.use('/users', userRouter);
 app.use('/reviews', reviewRouter);
+app.use('/posts', postRouter);
+app.use('/comments', CommentRouter);
 
 // default route to response if the user input a wrong route
 app.use('*', (req: Request, res: Response, next: NextFunction) => {

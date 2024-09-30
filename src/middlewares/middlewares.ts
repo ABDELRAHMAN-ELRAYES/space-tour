@@ -12,7 +12,10 @@ export const uploadUserPhotoMiddleware = createMulterMiddleware(
   'users',
   'photo'
 );
-
+export const uploadPostPhotoMiddleWare = createMulterMiddleware(
+  'posts',
+  'photo'
+);
 export const globalErrorHandlerMiddleware = (
   error: iError,
   req: Request,

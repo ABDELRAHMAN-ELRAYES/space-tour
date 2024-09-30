@@ -3,24 +3,68 @@ html(lang="en")
   head
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    title Share Your Planet
-    link(rel="stylesheet", href="../public/css/share.css")
+    title Space Tour | #{title}
+    link(rel="stylesheet", href="/css/share.css")
+    link(rel="icon", href="/img/icons/logo.png")
   body
     .container
+      .profile-container
+          if user 
+                .user
+                  img.user-img(src=`/img/users/${user.photo}`, alt="")
+                  p.user-name #{user.name}
+          else
+                .nav-button
+                  a.form-link.btn.white-btn#loginBtn(href="/login") Log In
+                  a.form-link.btn#registerBtn(href="/signup") Sign Up
+                .nav-menu-btn
+                  i.bx.bx-menu(onclick="myMenuFunction()")
       .content
         // the place where you post the image
         .postSection
-          h2 Share Your Planet
-          form#planetForm(method="post", enctype="multipart/form-data")
-            label(for="planetName") Planet Name
-            input(type="text", name="planetName", id="planetName", class="inputName", placeholder="Enter your planet's name", required)
+          .logo-title 
+            img(src="/img/icons/logo.png", alt="")
+            h2 Share Your Planet
+          form#planetForm(action="/posts/" method="post", enctype="multipart/form-data")
+            .input-dev
+              label(for="planetName") Write a description
+              textarea(type="text", name="description", id="planetName", class="inputName", placeholder="Enter your post description", required)
+            .file-btn
+              .input-dev
+                label(for="file-upload") Upload Planet Image
+                input(type="file", id="file-upload", name="photo", class="file-upload", accept="image/*", required)
 
-            label(for="file-upload") Upload Planet Image
-            input(type="file", id="file-upload", name="image", class="file-upload", accept="image/*", required)
-
-            button(type="submit", class="upload-btn") Post
-        // / the place where you post the image /
+              button(type="submit", class="upload-btn") Post
+        // the place where you post the image /
         // the posts list
         .postsList
-        // / the posts list /
-    script(src="../public/js/share.js")
+          each post in posts
+            .card
+              .profile-section
+                .profile-pic-container
+                  img.profile-pic(src=`/img/users/${post.user.photo}`, alt="User Profile Picture")
+                span.user-name #{post.user.name}
+              p.planet-name  #{post.description}
+              - let date = new Date(post.createdAt).toLocaleDateString('en-US', {  year: 'numeric',  month: 'long', day: 'numeric',hour:'numeric',minute:'numeric'});
+              p.post-date Post Date: #{date}
+              img.planetPic(src=`/img/posts/${post.photo}`, alt="")
+              .like-number  
+                a.heart-link(href=`/posts/like/${post._id}`) ❤️
+                p.likes-number=`${post.likes.length} `
+                  span.highlighted-word Likes
+              form.comment-sec(action=`/posts/${post._id}/comments` method="post")
+                .input-dev
+                  label.commentLabel(for="comment")
+                  input#comment(type="text", name="comment" required placeholder="Add a comment...")
+                button.comment-btn(type="submit") Comment
+              .comments-sec 
+                each comment in post.comments 
+                  .comment-card 
+                    .comment-user 
+                      img(src=`/img/users/${comment.user.photo}`, alt="")
+                      h3 #{comment.user.name}
+                    - let date = new Date(comment.createdAt).toLocaleDateString('en-US', {  year: 'numeric',  month: 'long', day: 'numeric',hour:'numeric',minute:'numeric'});
+                    p.post-date Commented At: #{date}
+                    p.post-comment #{comment.comment}
+
+    //- script(src="/js/share.js")

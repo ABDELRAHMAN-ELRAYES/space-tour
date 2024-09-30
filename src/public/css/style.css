@@ -51,6 +51,13 @@ body {
   text-decoration: none;
   color: #444;
 }
+.nav-logo {
+  display: flex;
+}
+.nav-logo img {
+  width: 6rem;
+  height: 6rem;
+}
 .nav-logo p {
   color: white;
   font-size: 25px;
@@ -167,6 +174,7 @@ header {
   border-radius: 30px;
   outline: none;
   transition: 0.2s ease;
+  margin: 0.5rem 0;
 }
 .input-field:hover,
 .input-field:focus {
@@ -182,6 +190,7 @@ header {
   color: #fff;
 }
 .submit {
+  margin-top: 2rem;
   font-size: 15px;
   font-weight: 500;
   color: black;
