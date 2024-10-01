@@ -1,0 +1,58 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Exoplanet Habitability Quiz
+    link(rel="stylesheet", href="/css/quiz.css")
+  body
+    #habitability-quiz
+      h2 Exoplanet Habitability Quiz
+
+      // Star Type Selection
+      label(for="star-type") Select the Star Type:
+      select#star-type
+        option(value="") Select...
+        option(value="m-dwarf") M-dwarf (Cool, Small)
+        option(value="g-type") G-type (Sun-like)
+        option(value="f-type") F-type (Hot, Large)
+
+      // Planet Size Selection
+      label(for="planet-size") Select the Planet Size:
+      select#planet-size
+        option(value="") Select...
+        option(value="earth-size") Earth-Sized
+        option(value="super-earth") Super-Earth
+        option(value="gas-giant") Gas Giant
+
+      // Orbit Distance Selection
+      label(for="orbit-distance") Select the Orbit Distance:
+      input(type="range", id="orbit-distance", min="0", max="2", step="0.1", value="1")
+      span#orbit-distance-value 1 AU (Earth Distance)
+
+      // Atmospheric Composition
+      label(for="atmosphere") Select Atmospheric Composition:
+      select#atmosphere
+        option(value="") Select...
+        option(value="nitrogen") Nitrogen-rich
+        option(value="oxygen") Oxygen-rich
+        option(value="methane") Methane-rich
+
+      // Star Age and Activity
+      label(for="star-age") Select the Star Age and Activity:
+      select#star-age
+        option(value="") Select...
+        option(value="young") Young and Active
+        option(value="middle-aged") Middle-aged and Stable
+        option(value="old") Old and Dying
+
+      // Submit and Reset Buttons
+      button#submit-quiz Submit
+      button#reset-quiz Reset
+
+      // Result Section
+      #result
+      #description
+      img#visual(src="", alt="Exoplanet Visual")
+
+    script(src="/js/quiz.js")

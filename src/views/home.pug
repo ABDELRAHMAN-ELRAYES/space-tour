@@ -1,0 +1,121 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Space Tour
+    link(rel="stylesheet", href="/css/home.css")
+  body
+    header
+      p Space Tour
+      div
+        button Sign In
+        button Sign Up
+
+    section#hero
+      div
+        h1 Exoplanets
+        a(href="#about-exoplanet") Explore
+
+    section#about-exoplanet
+      div
+        h1 What is an Exoplanet?
+        p
+          | An exoplanet is a planet that is outside our solar system. Exoplanets
+          | are typically found orbiting a star other than our Sun. In the same
+          | way that our solar system contains eight planets, other stars can have
+          | many exoplanets in orbit around them, Exoplanets are named after the
+          | stars they orbit. For example, the star TRAPPIST-1 has seven
+          | exoplanets in its system. Researchers have named them TRAPPIST-1b,
+          | TRAPPIST-1c, TRAPPIST-1d, and so on, up to TRAPPIST-1h. (TRAPPIST-1a
+          | is skipped because it informally refers to the system's central star.)
+          | The lowercase letters are given to the exoplanets in order of their
+          | discovery date. If many exoplanets are discovered at the same time,
+          | the lowercase letters are assigned according to how close the
+          | exoplanets are to their host star.
+        a(href="#confirmed-exoplanets") View More
+
+    section#confirmed-exoplanets
+      h1 Confirmed Exoplanets
+      div.slider-container#slider-container
+        div.slide
+          img(src="img/4.jpg", alt="Exoplanet 1")
+          div.slide-content
+            h2 TRAPPIST-1b
+            p
+              | In 2015, a team of scientists announced they had discovered three
+              | exoplanets orbiting TRAPPIST-1, a star about 40 light-years away
+              | from Earth. After observing the system with more telescopes, they
+              | found four additional planets. All seven TRAPPIST-1 exoplanets (b,
+              | c, d, e, f, g and h) are rocky and similar in size to Earth. At
+              | least three of them are located in the star's habitable zone. The
+              | TRAPPIST-1 system will be an important target for observation with
+              | the James Webb Space Telescope, to help researchers better
+              | understand other worlds. A Canadian team of astronomers will be
+              | studying the atmospheres of TRAPPIST-1 d, f, and g using the
+              | Canadian-made Near-Infrared Imager and Slitless Spectrograph
+              | (NIRISS) instrument.
+        div.slide
+          img(src="img/3.jpg", alt="Exoplanet 2")
+          div.slide-content
+            h2 Kepler-22b
+            p
+              | Roughly twice the size of Earth, Kepler-22b was discovered in 2011
+              | by NASA's Kepler Space Telescope. The exoplanet was the first to
+              | be found in any star's habitable zone. Although scientists are
+              | unsure what Kepler-22b looks like, the exoplanet orbits its star
+              | at just the right distance – where a planet is most likely to have
+              | a climate that would allow any water on its surface to remain
+              | liquid. This area is also called the Goldilocks Zone, since the
+              | conditions are not too hot, not too cold, but just right. However,
+              | there are no guarantees that this exoplanet, located about 600
+              | light-years away from Earth, hosts alien life, or that humans
+              | could live on it.
+        div.slide
+          img(src="img/2.jpg", alt="Exoplanet 3")
+          div.slide-content
+            h2 Proxima Centauri b
+            p
+              | Proxima Centauri is the closest star to the Sun. This red dwarf
+              | star is located 4.2 light-years – or 40 trillion kilometres – away
+              | from Earth. An exoplanet, Proxima Centauri b, was detected
+              | orbiting this star in 2016. Proxima Centauri b is a rocky planet
+              | that is a bit larger than Earth. Like Kepler-22b, it is also
+              | located in its star's habitable zone. Scientists find this
+              | exoplanet very intriguing, but they will have to continue studying
+              | it from afar – even using the fastest space probe ever built, the
+              | Parker Solar Probe which could travel at speeds of up to 724,000
+              | km/h, it would take almost 7000 years to reach Proxima Centauri b!
+              | In 2020, scientists confirmed the existence of a second planet in
+              | this system: Proxima Centauri c. This super-Earth or mini-Neptune
+              | is about 7 times as massive as our planet, but orbits its star
+              | beyond the habitable zone.
+        div.slide
+          img(src="img/1.jpg", alt="Exoplanet 4")
+          div.slide-content
+            h2 51 Pegasi b
+            p
+              | 51 Pegasi b was the first exoplanet ever discovered orbiting a
+              | star that resembles our Sun. Also the first Hot Jupiter ever
+              | observed, this gas giant located 50 light-years from Earth takes
+              | only 4.2 days to orbit its star. 51 Pegasi b's discovery in 1995
+              | by Swiss astronomers Michel Mayor and Didier Queloz surprised the
+              | scientific community since models of planetary formation at the
+              | time did not predict its existence. The pair later won the Nobel
+              | Prize in Physics in 2019 for their achievement.
+      div.arrows
+        button#prev &lt;
+        button#next &gt;
+
+    section#build-share
+      h1 Build Your Exoplanet and Share Your Creation
+      a(href="/build.pug") Build
+      a(href="/share.pug") Share
+
+    hr
+
+    section#build-share
+      h1 Take a Quiz!
+      a(href="/quiz.pug") Quiz
+
+    script(src="/js/home.js")
