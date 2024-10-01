@@ -1,0 +1,219 @@
+html {
+    scroll-behavior: smooth;
+  }
+  /* Base styles */
+  body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1f2022;
+    color: #fff;
+  }
+
+  h1,
+  h2,
+  p,
+  a {
+    margin: 0;
+    padding: 0;
+  }
+
+  a {
+    text-decoration: none;
+    color: #f0f0f0;
+  }
+
+  a:hover {
+    color: #909090;
+  }
+
+  /* Header styles */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: black;
+  }
+
+  header p {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  header button {
+    background-color: #66bb6a;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background-color 0.3s;
+  }
+
+  header button:hover {
+    background-color: #57a157;
+  }
+
+  /* Hero   
+section styles */
+  #hero {
+    background-image: url('img/heic1916a-jpg-ezgif.com-webp-to-jpg-converter.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 90vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 50px 0;
+  }
+
+  #hero h1 {
+    margin-left: 20px;
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+
+  #hero a {
+    margin-left: 20px;
+    background-color: #66bb6a;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  #hero a:hover {
+    background-color: #57a157;
+  }
+
+  #about-exoplanet {
+    background-color: black;
+  }
+
+  #about-exoplanet a {
+    background-color: #66bb6a;
+    border-radius: 25px;
+    transition: background-color 0.3s;
+  }
+
+  #about-exoplanet a:hover {
+    background-color: #57a157;
+  }
+
+  /* Section styles */
+  section {
+    padding: 50px 0;
+  }
+
+  section h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  section p {
+    line-height: 1.5;
+  }
+
+  section a {
+    display: inline-block;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+
+  /* Confirmed Exoplanets section styles */
+  #confirmed-exoplanets {
+position: relative;
+width: 100%;
+height: 100vh;
+overflow: hidden;
+background-color: #161616;
+color: #fff;
+}
+
+#confirmed-exoplanets h1 {
+text-align: center;
+font-size: 3em;
+margin: 20px 0;
+}
+
+.slider-container {
+display: flex;
+transition: transform 0.5s ease-in-out;
+width: 400%; 
+}
+
+.slide {
+width: 100%; 
+display: flex; 
+align-items: center; 
+}
+
+.slide img {
+width: 50%; 
+height: auto; 
+}
+
+.slide-content {
+width: 50%; 
+padding: 20px; 
+text-align: left;
+}
+
+.slide h2 {
+font-size: 2.5em;
+margin-bottom: 15px;
+}
+
+.arrows {
+position: absolute;
+top: 50%;
+width: 100%;
+display: flex;
+justify-content: space-between;
+transform: translateY(-50%);
+}
+
+.arrows button {
+background-color: transparent;
+border: none;
+color: white;
+font-size: 2em;
+cursor: pointer;
+}
+  /* Build Your Exoplanet section styles */
+  #build-share {
+    background-color: black;
+    text-align: center;
+    padding: 50px 0;
+  }
+
+  #build-share h1 {
+    font-size: 2rem;
+    margin-bottom: 2;
+  }
+  #build-share a{
+    background-color: #66bb6a;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  #build-share a:hover{
+    background-color: #57a157;
+  }
+  hr{
+    background-color: black;
+  }
