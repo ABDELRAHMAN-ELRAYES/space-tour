@@ -1,6 +1,6 @@
 :root {
-  --bg-color: #2f0067;
-  --con-color: #cc5cc9;
+  --bg-color: #1f1f1f;
+  --con-color: #66bb6a;
   --prev-con-color: #66bb6a;
 }
 body {
@@ -152,7 +152,7 @@ body {
 }
 
 .postSection button:hover {
-  background-color: #ad61d9;
+  background-color: #57a157;
 }
 
 .postSection .upload-btn {
@@ -289,7 +289,7 @@ body {
   align-items: center;
 }
 .comment-sec button {
-  height: 2.7rem;
+  height: 2.3rem;
   border-radius: 2rem;
   width: 12rem;
   color: #ccc;
@@ -299,7 +299,7 @@ body {
   cursor: pointer;
 }
 #comment {
-  width: 40rem;
+  width: 35rem;
   padding: 10px;
   border-radius: 10px;
   border: 1px solid var(--con-color);

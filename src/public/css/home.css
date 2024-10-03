@@ -59,7 +59,7 @@ html {
   /* Hero   
 section styles */
   #hero {
-    background-image: url('img/heic1916a-jpg-ezgif.com-webp-to-jpg-converter.jpg');
+    background-image: url('/img/heic1916a-jpg-ezgif.com-webp-to-jpg-converter.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;

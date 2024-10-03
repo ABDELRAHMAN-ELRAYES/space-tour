@@ -5,7 +5,7 @@ html(lang="en")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title Space Tour | #{title}
     link(rel="stylesheet", href="/css/share.css")
-    link(rel="icon", href="/img/icons/logo.png")
+
   body
     .container
       .profile-container
@@ -23,7 +23,6 @@ html(lang="en")
         // the place where you post the image
         .postSection
           .logo-title 
-            img(src="/img/icons/logo.png", alt="")
             h2 Share Your Planet
           form#planetForm(action="/posts/" method="post", enctype="multipart/form-data")
             .input-dev

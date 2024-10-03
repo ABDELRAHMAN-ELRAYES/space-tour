@@ -1,9 +1,19 @@
+// src/controllers/viewsControllers.ts
 import { Request, Response, NextFunction } from 'express';
 import { catchAsync } from '../utils/catchAsync';
 import User from '../models/userModel';
 import Post from '../models/postModel';
 
-// render login page
+// Render the index page
+export const renderIndex = catchAsync(
+  async (req: Request, res: Response, next: NextFunction) => {
+    res.status(200).render('index', {
+      title: 'Welcome to Space Tour',
+    });
+  }
+);
+
+// Render login page
 export const renderLogin = catchAsync(
   async (req: Request, res: Response, next: NextFunction) => {
     res.status(200).render('login', {
@@ -12,7 +22,7 @@ export const renderLogin = catchAsync(
   }
 );
 
-// render signup page
+// Render signup page
 export const renderSignup = catchAsync(
   async (req: Request, res: Response, next: NextFunction) => {
     res.status(200).render('signup', {
@@ -21,15 +31,24 @@ export const renderSignup = catchAsync(
   }
 );
 
-// render the build exoplanet page
+// Render the build exoplanet page
 export const renderBuildExoplanet = catchAsync(
   async (req: Request, res: Response, next: NextFunction) => {
     res.status(200).render('build', {
-      title: 'Buld Exoplanet',
+      title: 'Build Exoplanet',
     });
   }
 );
-// render the share exoplanet page
+
+export const renderQuiz = catchAsync(
+  async (req: Request, res: Response, next: NextFunction) => {
+    res.status(200).render('quiz', {
+      title: 'Quiz!',
+    });
+  }
+);
+
+// Render the share exoplanet page
 export const renderSharePage = catchAsync(
   async (req: Request, res: Response, next: NextFunction) => {
     const posts = await Post.find().populate({
@@ -45,3 +64,4 @@ export const renderSharePage = catchAsync(
     });
   }
 );
+

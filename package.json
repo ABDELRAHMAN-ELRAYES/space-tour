@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start:dev": "tsx watch --env-file=.env src/server.ts",
-    "start": "NODE_ENV=production tsx --env-file=.env src/server.ts"
+    "start:dev": "tsx watch src/server.ts",
+    "start": "cross-env NODE_ENV=production tsx  src/server.ts"
   },
   "keywords": [],
   "author": "",
@@ -21,6 +21,7 @@
     "@types/multer": "^1.4.12",
     "@types/node": "^22.5.5",
     "@types/validator": "^13.12.1",
+    "cross-env": "^7.0.3",
     "dotenv": "^16.4.5",
     "mongoose": "^8.6.2",
     "ts-node": "^10.9.2",
